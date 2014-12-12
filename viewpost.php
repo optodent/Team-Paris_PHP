@@ -5,7 +5,7 @@
     $row = $statement->fetch();
 
     //if no post redirect to home page
-    if($row['postID'] == ''){
+    if($row['post_id'] == ''){
         header('Location: ./');
         exit;
     }

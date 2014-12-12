@@ -2,19 +2,43 @@
 ob_start();
 session_start();
 
-//database connection
+//database credentials
 define('DBHOST','localhost');
 define('DBUSER','root');
 define('DBPASS','');
-define('DBNAME','php_blog');
-$dataBase = new PDO("mysql:host=".DBHOST.";port=3306;dbname=".DBNAME, DBUSER, DBPASS);
-//handle error reporting
-$dataBase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+define('DBNAME','blog');
 
-date_default_timezone_set('Europe/Sofia');
+$db = new PDO("mysql:host=".DBHOST.";port=3306;dbname=".DBNAME, DBUSER, DBPASS);
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//loading user class
-require_once("../classes/classUser.php");
-$user = new User($dataBase);
 
+//set timezone
+date_default_timezone_set('Europe/London');
+
+//load classes as needed
+function __autoload($class) {
+   
+   $class = strtolower($class);
+
+	//if call from within assets adjust the path
+   $classpath = 'classes/class.'.$class . '.php';
+   if ( file_exists($classpath)) {
+      require_once $classpath;
+	} 	
+	
+	//if call from within admin adjust the path
+   $classpath = '../classes/class.'.$class . '.php';
+   if ( file_exists($classpath)) {
+      require_once $classpath;
+	}
+	
+	//if call from within admin adjust the path
+   $classpath = '../../classes/class.'.$class . '.php';
+   if ( file_exists($classpath)) {
+      require_once $classpath;
+	} 		
+	 
+}
+
+$user = new User($db); 
 ?>
