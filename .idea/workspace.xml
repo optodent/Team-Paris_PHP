@@ -37,13 +37,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewpost.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewpost.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewpost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43889844" vertical-offset="0" max-vertical-offset="581">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
               <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <marker date="1418404244828" expanded="true" signature="84:171" placeholder="SELECT post_..db_posts..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classUser.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/classUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6781411" vertical-offset="456" max-vertical-offset="1037">
+              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+              <folding>
+                <marker date="1418405376392" expanded="true" signature="873:931" placeholder="SELECT passw..db_members..." />
               </folding>
             </state>
           </provider>
@@ -72,10 +84,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/classes/classUser.php" />
         <option value="$PROJECT_DIR$/includes/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/viewpost.php" />
+        <option value="$PROJECT_DIR$/classes/classUser.php" />
       </list>
     </option>
   </component>
@@ -220,14 +232,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/classUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29259896" vertical-offset="0" max-vertical-offset="581">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="425">
@@ -248,10 +252,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewpost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43889844" vertical-offset="0" max-vertical-offset="581">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <marker date="1418404244828" expanded="true" signature="84:171" placeholder="SELECT post_..db_posts..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/classUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6781411" vertical-offset="456" max-vertical-offset="1037">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+          <folding>
+            <marker date="1418405376392" expanded="true" signature="873:931" placeholder="SELECT passw..db_members..." />
           </folding>
         </state>
       </provider>
