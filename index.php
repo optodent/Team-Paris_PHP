@@ -12,20 +12,32 @@ require('includes/config.php'); ?>
 
 <div id="wrapper">
 
-    <h1>Blog</h1>
-    <hr />
+    <h1>The Blog of Team Paris</h1>
 
+    <form method="post">
+        <p>
+            <label>Search By Tag</label>
+            <input type="text" name="searchTag"/>
+        </p>
+        <input type="submit" name="submit" value="Search"/>
+    </form>
     <?php
     try {
+        //viewing all posts
+        if(isset($_POST['submit'])){
+            $searchTag = '%'.$_POST['searchTag'].'%';
 
-        $stmt = $db->query('SELECT postID, postTitle, postDesc, postDate FROM blog_posts ORDER BY postID DESC');
+        }else{
+            $searchTag = '%';
+        }
+        $stmt = $dataBase->query("SELECT post_id, post_title, post_desc, post_date FROM db_posts WHERE post_tags LIKE '$searchTag' ORDER BY post_id DESC");
         while($row = $stmt->fetch()){
 
             echo '<div>';
-            echo '<h1><a href="viewpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h1>';
-            echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['postDate'])).'</p>';
-            echo '<p>'.$row['postDesc'].'</p>';
-            echo '<p><a href="viewpost.php?id='.$row['postID'].'">Read More</a></p>';
+            echo '<h1><a href="viewpost.php?id='.$row['post_id'].'">'.$row['post_title'].'</a></h1>';
+            echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['post_date'])).'</p>';
+            echo '<p>'.$row['post_desc'].'</p>';
+            echo '<p><a href="viewpost.php?id='.$row['post_id'].'">Read More</a></p>';
             echo '</div>';
 
         }
