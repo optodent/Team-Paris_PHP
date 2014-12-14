@@ -25,7 +25,7 @@ require('includes/config.php'); ?>
     try {
         //viewing all posts
         if(isset($_POST['submit'])){
-            $searchTag = '%'.$_POST['searchTag'].'%';
+            $searchTag = '%'.htmlspecialchars($_POST['searchTag']).'%';
 
         }else{
             $searchTag = '%';

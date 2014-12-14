@@ -97,8 +97,8 @@ if($row['post_id'] == ''){
     while($row = $stmt->fetch()){
 
         echo '<div>';
-        echo   '<h4>By '.$row['name'].'    '. $row['email']. '</h4>' ;
-        echo '<p>'.$row['content'].'</p>';
+        echo   '<h4>By '.htmlspecialchars($row['name']).'    '. htmlspecialchars($row['email']). '</h4>' ;
+        echo '<p>'.htmlspecialchars($row['content']).'</p>';
         echo '</div>';
     }
     ?>
