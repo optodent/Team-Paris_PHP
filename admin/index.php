@@ -8,7 +8,7 @@ if(!$user->checkIfLogged()){ header('Location: login.php'); }
 //show message from add / edit page
 if(isset($_GET['delpost'])){ 
 
-	$stmt = $dataBase->prepare('DELETE FROM db_posts WHERE post_id = :postID') ;
+	$stmt = $dataBase->prepare('DELETE FROM db_posts WHERE post_id = :postID; DELETE FROM db_comments WHERE post_id = :postID');
 	$stmt->execute(array(':postID' => $_GET['delpost']));
 
 	header('Location: index.php?action=deleted');

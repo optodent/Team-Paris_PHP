@@ -32,7 +32,6 @@ require('includes/config.php'); ?>
         }
         $stmt = $dataBase->query("SELECT post_id, post_title, post_desc, post_date FROM db_posts WHERE post_tags LIKE '$searchTag' ORDER BY post_id DESC");
         while($row = $stmt->fetch()){
-
             echo '<div>';
             echo '<h1><a href="viewpost.php?id='.$row['post_id'].'">'.$row['post_title'].'</a></h1>';
             echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['post_date'])).'</p>';
