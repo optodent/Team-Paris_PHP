@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Lato:100,300,400);
+
+html {
+    background: url('eiffelTower.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+.glyphicon-remove {
+    color: red;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.panel {
+    margin-top: 68px;
+    opacity: 0.98;
+}
+
+.panel-primary {
+    float: right;
+    width: 100%;
+}
+
+.menu {
+    width: 200px;
+    float: left;
+    margin-right: 40px;
+}
+
+.titles {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 18px;
+}
+
+.panel-heading {
+    font-size: 24px;
+}
+
+.opts {
+    font-size: 20px;
+}
+
+.glyphicon-log-out, .glyphicon-plus, .glyphicon-edit {
+    color: black;
+}
+
+.btn-default {
+    float: right;
+    font-size: 16px;
+}
+
+.none:hover {
+    text-decoration: none;
+}
+
+.right {
+    margin-left: 3%;
+    float: left;
+    width: 70%;
+}
+
+.label-default {
+    font-size: 15px;
+}
+
+.post {
+    margin: auto;
+    padding: 10px;
+}
+
+.alert-success {
+    margin-left: 3%;
+    float: left;
+    width: 70%;
+    font-size: 20px;
+    margin-bottom: -60px;
+    margin-top: 5px;
+}
+
+.success {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
