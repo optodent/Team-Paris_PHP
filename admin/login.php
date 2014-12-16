@@ -2,50 +2,88 @@
 //include config
 require_once('../includes/config.php');
 
-
 //check if already logged in
-if( $user->checkIfLogged() ){ header('Location: index.php'); }
+if ($user->checkIfLogged()) {
+    header('Location: index.php');
+}
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Admin Login</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--include CSS Style Sheet-->
+    <link href='styles/bootstrap.css' rel='stylesheet'>
+    <link href='styles/bootstrap-responsive.css' rel='stylesheet'>
+    <link href='styles/login.css' rel='stylesheet'>
+
 </head>
+
 <body>
 
-<div id="login">
+<div class="container">
 
-	<?php
+    <div id="login-wraper">
 
-	//process login form if submitted
-	if(isset($_POST['submit'])){
+        <form class="form login-form">
+            <legend>
+                Login to <span class="blue">Admin Panel</span>
+            </legend>
 
-		$username = trim($_POST['username']);
-		$password = trim($_POST['password']);
-		
-		if($user->login($username,$password)){ 
+            <div class="body">
+                <label>Username</label>
+                <input type="text" name="username">
 
-			//logged in return to index page
-			header('Location: index.php');
-			exit;
-		
+                <label>Password</label>
+                <input type="password" name="password">
 
-		} else {
-			$message = '<p class="error">Wrong username or password</p>';
-		}
+            </div>
 
-	}//end if submit
+            <div class="footer">
+                <button type="submit" class="btn btn-primary" name="submit">
+                    Login
+                </button>
+            </div>
 
-	if(isset($message)){ echo $message; }
-	?>
+        </form>
 
-	<form action="" method="post">
-	<p><label>Username</label><input type="text" name="username" value=""  /></p>
-	<p><label>Password</label><input type="password" name="password" value=""  /></p>
-	<p><label></label><input type="submit" name="submit" value="Login"  /></p>
-	</form>
+        <?php
+
+        //process login form if submitted
+        if (isset($_GET['submit'])) {
+
+            $username = trim($_GET['username']);
+            $password = trim($_GET['password']);
+
+            if ($user->login($username, $password)) {
+
+                //logged in return to index page
+                header('Location: index.php');
+                exit;
+
+
+            } else {
+                $message = '<div class="alert alert-danger" role="alert">
+								<p class="error">
+										Oops! Wrong username or password.
+								</p>
+							</div>';
+            }
+
+        }//end if submit
+
+        if (isset($message)) {
+            echo $message;
+        }
+        ?>
+
+    </div>
 
 </div>
+
 </body>
 </html>
