@@ -109,7 +109,7 @@ if (isset($_GET['deluser'])) {
             </div>
 
             <button type="button" class="btn btn-default">
-                <a href='adduser.php' class="none"><span class="glyphicon glyphicon-plus"> Add User</span></a>
+                <a href='adduser.php' class="none"><span class="glyphicon glyphicon-plus"></span> Add User</a>
             </button>
 
         </div>
