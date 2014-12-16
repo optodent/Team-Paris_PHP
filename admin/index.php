@@ -102,7 +102,7 @@ if (isset($_GET['delpost'])) {
             </div>
 
             <button type="button" class="btn btn-default">
-                <a href='addpost.php' class="none">Add Post <span class="glyphicon glyphicon-plus"></span></a>
+                <a href='addpost.php' class="none"><span class="glyphicon glyphicon-plus"> Add Post</span></a>
             </button>
 
         </div>
