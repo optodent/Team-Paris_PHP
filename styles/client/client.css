@@ -1,0 +1,95 @@
+html {
+    background: url('eiffelTower_client.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+}
+
+#wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+.navbar-left {
+    float: right!important;
+}
+
+h1 {
+    font-family: 'Droid Serif', Georgia, Times, serif;
+    font-size: 49px;
+    line-height: 65px;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+hr {
+    border-top: 1px solid black;
+}
+
+article {
+    opacity: 0.98;
+}
+
+.panel-info {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h3 {
+    text-align: center;
+}
+
+.date {
+    text-align: right;
+}
+
+.white {
+    color: white;
+}
+
+.comments {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.form-comments {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.back {
+    margin-bottom: 20px;
+}
+
+.content {
+    opacity: 0.98;
+}
+
+.form_comments {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+img {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 33px;
+}

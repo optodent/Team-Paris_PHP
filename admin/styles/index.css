@@ -43,7 +43,7 @@ html {
 }
 
 .desc {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .panel-heading {
@@ -70,7 +70,7 @@ html {
 .right {
     margin-left: 3%;
     float: left;
-    width: 70%;
+    width: 73%;
 }
 
 .label-default {

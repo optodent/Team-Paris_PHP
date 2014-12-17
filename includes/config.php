@@ -8,7 +8,7 @@ define('DBUSER','root');
 define('DBPASS','');
 define('DBNAME','php_blog.sql');
 
-$dataBase = new PDO("mysql:host=".DBHOST.";port=3306;dbname=".DBNAME, DBUSER, DBPASS);
+$dataBase = new PDO("mysql:host=" . DBHOST.";port=3306;dbname=".DBNAME, DBUSER, DBPASS);
 $dataBase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -21,7 +21,7 @@ function __autoload($class) {
    $class = strtolower($class);
 
 	//if call from within assets adjust the path
-   $classpath = 'classes/'.$class . '.php';
+   $classpath = 'classes/'. $class . '.php';
    if ( file_exists($classpath)) {
       require_once $classpath;
 	} 	

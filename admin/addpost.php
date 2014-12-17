@@ -15,7 +15,7 @@ if (!$user->checkIfLogged()) {
 
     <!--CSS Style sheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link href='styles/abootstrap-responsive.css' rel='stylesheet'>
+    <link href='styles/bootstrap-responsive.css' rel='stylesheet'>
     <link href='styles/index.css' type='text/css' rel="stylesheet">
 
     <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
